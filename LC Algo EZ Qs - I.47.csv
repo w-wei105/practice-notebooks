@@ -1,0 +1,70 @@
+No.,Tag,Difficulty,#,Title,Acceptance,Latest,Takeaway,
+26,linked list,,160,Intersection of Two Linked Lists,37.70%,TBC,,
+8,linked list,?,206,Reverse Linked List,59.50%,TBC,,
+33,linked list,?,21,Merge Two Sorted Lists,51.20%,TBC,,
+,linked list,,237,Delete Node in a Linked List,58.10%,TBC,,
+24,tree,?,104,Maximum Depth of Binary Tree,63.90%,TBC,,
+28,tree,?,101,Symmetric Tree,45.60%,TBC,,
+16,tree,,617,Merge Two Binary Trees,72.60%,TBC,,
+4,tree,,226,Invert Binary Tree,61.60%,TBC,,
+41,tree,,543,Diameter of Binary Tree,48.20%,TBC,,
+13,tree,,437,Path Sum III,44.80%,TBC,,
+45,bit manipulation,,190,Reverse Bits,34.90%,NA,,
+38,bit manipulation,,191,Number of 1 Bits,46.80%,NA,,
+,bit manipulation,?,371,Sum of Two Integers,50.70%,NA,,
+30,design,,155,Min Stack,40.80%,NA,,
+9,array,,581,Shortest Unsorted Continuous Subarray,30.70%,2/25,sort the array then compare,
+43,array,,189,Rotate Array,32.90%,2/25,"we firstly reverse all the elements of the array. Then, reversing the first k elements followed by reversing the rest n-kn−k elements gives us the required result.",
+47,array,,66,Plus One,41.90%,2/25,"convert that list to an integer, num so each digit is multiplied by the proper place value and added to num
+last step is to add 1 to num, convert it to a list and return that list",
+44,array,,121,Best Time to Buy and Sell Stock,49.30%,2/27,"the logic is to calculate the difference (maxCur += prices[i] - prices[i-1]) of the original array, and find a contiguous subarray giving maximum profit. If the difference falls below 0, reset it to zero",
+31,array,,122,Best Time to Buy and Sell Stock II,54.30%,2/27,"keep on adding the difference between the consecutive numbers of the array if the second number is larger than the first one, and at the total sum we obtain will be the maximum profit.",
+15,array,???,448,Find All Numbers Disappeared in an Array,55.10%,2/25,https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/discuss/344583/Python%3A-O(1)-space-solution,for every number visited we mark the presence of that number by negating the number at the index equal to the current number
+3,dp,,198,House Robber,41.60%,2/25,"Find recursive relation: rob(i) = Math.max( rob(i - 2) + currentHouseValue, rob(i - 1) )",
+,dp,??,118,Pascal's Triangle,50.00%,2/25,https://leetcode.com/problems/pascals-triangle/discuss/38277/Simple-Python-4-lines,
+19,hash table,,1,Two Sum,45.10%,2/25,brutal force with 2 loops or hash table + enumerate(),
+32,hash table,,217,Contains Duplicate,54.80%,2/26,set(),sort then find consecutive duplicates
+37,hash table,,242,Valid Anagram,55.00%,2/26,sorted(),
+25,math,,7,Reverse Integer,25.60%,2/26,"check for edge cases the use slice
+the slice statement [::-1] means start at the end of the string and end at position 0, move with the step -1, negative one, which means one step backwards.
+extended slice offers to put a “step” field as [start,stop,step], and giving no field as start and stop indicates default to 0 and string length respectively and “-1” denotes starting from end and stop at the start, hence reversing string.","Using loop
+Using recursion"
+46,math,???,204,Count Primes,30.50%,2/26,https://leetcode.com/problems/count-primes/discuss/153528/Python3-99-112-ms-Explained%3A-The-Sieve-of-Eratosthenes-with-optimizations,
+,math,,69,Sqrt(x),32.80%,2/26,"find the largest number, which num*num <= x by binary search",
+23,math,,172,Factorial Trailing Zeroes,37.70%,2/27,find the occurance of 5 using recursion f(n) = n/5 + f(n/5),
+7,math,,326,Power of Three,41.90%,2/26,"Loop Iteration. One simple way of finding out if a number n is a power of a number b is to keep dividing n by b as long as the remainder is 0. Hence it should be possible to divide n by b x times, every time with a remainder of 0 and the end result to be 1.
+Notice that we need a guard to check that n != 0, otherwise the while loop will never finish. For negative numbers, the algorithm does not make sense, so we will include this guard as well.",
+6,math,,202,Happy Number,48.40%,2/26,use memory = set() to keep track so the loop breaks at some point,
+5,math,,268,Missing Number,50.20%,2/26,Gauss' Formula,
+42,math,,171,Excel Sheet Column Number,53.20%,2/26,res = res*26 + ord(i)-ord('A')+1,Python doesn't use {} need to indent for loop/function
+17,math,,13,Roman to Integer,54.40%,2/26,"use of dictionay and interation. The trick is that the last letter is always added. Except the last one, if one letter is less than its latter one, this letter is subtracted.",
+39,math,,136,Single Number,62.80%,2/26,"Iterate over all the elements in \text{nums}nums; If some number is new to array, append it; If some number is already in the array, remove it OR 2∗(a+b+c)−(a+a+b+b+c)=c",
+14,non algo,,169,Majority Element,55.80%,2/26,"two loops brutal force OR collections.Counter(nums) or num.sort() b/c If the elements are sorted in monotonically increasing (or decreasing) order, the majority element can be found at index n/2 or n/2+1 if n is even).",
+2,non algo,,412,Fizz Buzz,61.10%,2/26,"Initialize an empty answer list.
+Iterate on the numbers from 1 ... N1...N; For every number, if it is divisible by both 3 and 5, add FizzBuzz to the answer list.
+Else, Check if the number is divisible by 3, add Fizz.
+Else, Check if the number is divisible by 5, add Buzz.
+Else, add the number.
+",
+,recursion,??,53,Maximum Subarray,45.60%,2/26,Kadane's algorithm,
+27,recursion,,70,Climbing Stairs,46.10%,2/26,Kadane's algorithm,
+20,stack,,20,Valid Parentheses,38.00%,2/25,stack.pop() & dictionary,
+21,string,,14,Longest Common Prefix,34.70%,2/25,find the shortest string and use enumerate() to compare it with other strings,
+40,string,???,38,Count and Say,43.00%,2/25,https://leetcode.com/problems/count-and-say/discuss/16044/Simple-Python-Solution,
+29,tree,,108,Convert Sorted Array to Binary Search Tree,55.00%,2/25,"find the root first, then recursively build each left and right subtree",
+10,two pointers,,28,Implement strStr(),33.70%,2/27,for i in range(len(haystack) - len(needle)+1):look for a string that equals needle,
+18,two pointers,???,125,Valid Palindrome,34.00%,2/26,https://leetcode.com/problems/valid-palindrome/discuss/39982/Python-in-place-two-pointer-solution.,"The isalnum() method returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9)."
+34,two pointers,?,234,Palindrome Linked List,37.90%,2/26,https://leetcode.com/problems/palindrome-linked-list/discuss/64689/Python-easy-to-understand-solution-with-comments-(operate-nodes-directly).,
+36,two pointers,?,88,Merge Sorted Array,38.00%,2/26,"if nums1[m-1] >= nums2[n-1]:
+                nums1[m+n-1] = nums1[m-1]
+                m -= 1",
+,two pointers,,141,Linked List Cycle,39.50%,2/26,"Use two pointers, walker and runner; walker moves step by step. runner moves two steps at time; if the Linked List has a cycle walker and runner will meet at some point.",
+22,two pointers,?,26,Remove Duplicates from Sorted Array,43.30%,2/26,"Since the array is already sorted, we can keep two pointers ii and jj, where ii is the slow-runner while jj is the fast-runner. 
+As long as nums[i] = nums[j]nums[i]=nums[j], we increment jj to skip the duplicate. 
+When we encounter nums[j] =nums[i], the duplicate run has ended so we must copy its value to nums[i + 1]nums[i+1]. ii is then incremented and we repeat the same process again until jj reaches the end of array.
+
+",
+11,two pointers,,283,Move Zeroes,56.20%,2/27,updating the start and end index number,
+12,two pointers,,344,Reverse String,65.60%,2/27,updating left and right index number,
+35,,,350,Intersection of Two Arrays II,50.30%,2/26,"collections.Counter() stores elements as dictionary keys, and their counts are stored as dictionary values.",
+1,,,387,First Unique Character in a String,51.40%,2/26,collections.Counter() + enumerate(),
